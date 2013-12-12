@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8"/>
+    <script type="text/javascript" src="js/require.js"></script>
+  </head>
+  <body>
+    <script>
+      require.config({
+        baseUrl: "./js",
+        paths: {
+            "jquery": "jquery-1.10.2"
+        }
+      });
+
+      define("jQuery", ["jquery"], function ($) {
+          return $;
+      });
+      require(["jQuery"], function ($) {
+         console.log($);
+         console.log($("body")[0]);
+      });
+    </script>
+  </body>
+</html>
